@@ -1,0 +1,37 @@
+{
+  "name": "@devvir/netgate",
+  "version": "1.0.0",
+  "description": "A gate every outbound request waits on, so a failing network costs a pause instead of a flood of retries",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage"
+  },
+  "private": false,
+  "keywords": [
+    "network",
+    "connectivity",
+    "offline",
+    "resilience",
+    "backpressure",
+    "throttle"
+  ],
+  "author": "Diego Indart <db.indart.dev@gmail.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^25.3.0",
+    "@vitest/coverage-v8": "^4.0.18",
+    "typescript": "^5.9.3",
+    "vitest": "^4.0.18"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "require": "./dist/index.js",
+      "import": "./dist/index.js"
+    }
+  }
+}
